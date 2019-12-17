@@ -1,0 +1,517 @@
+{
+    "name": "Signage",
+    "components": [
+        {
+            "name": "/Main",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "436f81f6-184d-bb3f-ea7e-e74d25e48096",
+                        "fromProperty": "timerFinished",
+                        "toId": "9e2b407a-41f2-f15a-ac58-74a061e301ec",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "9e2b407a-41f2-f15a-ac58-74a061e301ec",
+                        "fromProperty": "timerFinished",
+                        "toId": "436f81f6-184d-bb3f-ea7e-e74d25e48096",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "2d3ccd33-f1ef-2dc5-3e1a-ca9d61cd222b",
+                        "fromProperty": "touch.tap",
+                        "toId": "436f81f6-184d-bb3f-ea7e-e74d25e48096",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "9e2b407a-41f2-f15a-ac58-74a061e301ec",
+                        "fromProperty": "timerFinished",
+                        "toId": "f5cb3f92-1d0c-4548-1030-6d8288a6d6ec",
+                        "toProperty": "fetch"
+                    },
+                    {
+                        "fromId": "f5cb3f92-1d0c-4548-1030-6d8288a6d6ec",
+                        "fromProperty": "image",
+                        "toId": "3292051b-93ad-19f5-ba7c-f271328f3e70",
+                        "toProperty": "image"
+                    },
+                    {
+                        "fromId": "f5cb3f92-1d0c-4548-1030-6d8288a6d6ec",
+                        "fromProperty": "desc",
+                        "toId": "b11a36ce-37f7-a644-0975-63ca83ac4ea8",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "f5cb3f92-1d0c-4548-1030-6d8288a6d6ec",
+                        "fromProperty": "temp",
+                        "toId": "6177b05b-344c-8609-c5a7-06dd2f0cfa1c",
+                        "toProperty": "値"
+                    },
+                    {
+                        "fromId": "f5cb3f92-1d0c-4548-1030-6d8288a6d6ec",
+                        "fromProperty": "hum",
+                        "toId": "ae0fa97e-db60-eacd-7c32-c6007b51fbf8",
+                        "toProperty": "値"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "2d3ccd33-f1ef-2dc5-3e1a-ca9d61cd222b",
+                        "type": "Group",
+                        "label": "Root",
+                        "x": 264,
+                        "y": 278,
+                        "parameters": {
+                            "fill": "parent"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "f0aafecc-cb37-1b45-3b9f-dd717b810689",
+                                "type": "Image",
+                                "version": 2,
+                                "x": 20,
+                                "y": 61,
+                                "parameters": {
+                                    "image": "背景.jpg",
+                                    "fillMode": "aspectFill",
+                                    "sizeMode": "explicit"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "189062e3-73dc-05ee-617c-55a3c2f1cc31",
+                                "type": "Text",
+                                "x": 20,
+                                "y": 122,
+                                "parameters": {
+                                    "alignX": "left",
+                                    "alignY": "top",
+                                    "text": "Weather infomation",
+                                    "fontSize": 65,
+                                    "color": "#000000",
+                                    "sizeMode": "childSize",
+                                    "alignment": "left",
+                                    "lineHeight": 0,
+                                    "x": 10,
+                                    "y": 10,
+                                    "fontFamily": "Times New Roman"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "e7b22fd1-cee8-2d65-2bf1-99679bfb5b96",
+                                "type": "Stack Layout",
+                                "x": 20,
+                                "y": 183,
+                                "parameters": {
+                                    "orientation": "vertical",
+                                    "padding": 0,
+                                    "alignX": "left",
+                                    "alignY": "center",
+                                    "x": 10,
+                                    "itemSpacing": 10,
+                                    "sizeMode": "childSize",
+                                    "y": 0
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "6177b05b-344c-8609-c5a7-06dd2f0cfa1c",
+                                        "type": "/データ表示",
+                                        "x": 20,
+                                        "y": 46,
+                                        "parameters": {
+                                            "名前": "気温",
+                                            "値": "25",
+                                            "単位": "℃"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "ae0fa97e-db60-eacd-7c32-c6007b51fbf8",
+                                        "type": "/データ表示",
+                                        "x": 20,
+                                        "y": 128,
+                                        "parameters": {
+                                            "名前": "湿度",
+                                            "単位": "%",
+                                            "値": "30"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ce328fac-5150-ab16-6f1b-0deceb116fa7",
+                                "type": "Group",
+                                "version": 2,
+                                "x": 20,
+                                "y": 321,
+                                "parameters": {
+                                    "alignY": "center",
+                                    "alignX": "center",
+                                    "sizeMode": "childSize"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "e4c60540-ff82-2e49-a434-3e6c37a0283b",
+                                        "type": "Rectangle",
+                                        "x": 20,
+                                        "y": 46,
+                                        "parameters": {
+                                            "width": {
+                                                "value": 250,
+                                                "unit": "px"
+                                            },
+                                            "height": {
+                                                "value": 250,
+                                                "unit": "px"
+                                            },
+                                            "color": "#FFFFFF",
+                                            "opacity": 1,
+                                            "cornerRadius": 10
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "3292051b-93ad-19f5-ba7c-f271328f3e70",
+                                        "type": "Image",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 92,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "alignY": "center"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "b11a36ce-37f7-a644-0975-63ca83ac4ea8",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 138,
+                                        "parameters": {
+                                            "alignX": "center",
+                                            "alignY": "top",
+                                            "color": "#000000",
+                                            "fontSize": 30
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "217398ff-6a14-24a1-6616-e67a9f20b5e4",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 184,
+                                        "parameters": {
+                                            "alignX": "right",
+                                            "color": "#000000",
+                                            "alignY": "bottom",
+                                            "fontSize": 20,
+                                            "text": "OpenWeatherMap"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "f5cb3f92-1d0c-4548-1030-6d8288a6d6ec",
+                        "type": "REST",
+                        "x": 43.68945590765725,
+                        "y": 591.3531834811997,
+                        "parameters": {
+                            "code": "define({\n\t// The input ports of the REST node, name of input and type\n\tinputs:{\n\t    //ExampleInput:'number',\n\t},\n\t\n\t// The output ports of the REST node, name of output and type\n\toutputs:{\n\t    temp:'string',\n\t    hum:'string',\n\t    id:'string',\n\t    desc:'string',\n\t    image:'string',\n\t},\n\t\n\t//Add custom code to setup the request object before the request\n\t//is made.\n\t//\n\t//*request.resource     contains the resource path of the request.\n\t//*request.method       contains the method, GET, POST, PUT or DELETE.\n\t//*request.headers      is a map where you can add additional headers.\n\t//*request.patemp:'string',rameters   is a map the parameters that will be appended\n\t//                      to the url.\n\t//*request.content      contains the content of the request as a javascript\n\t//                      object.\n\t//\n\t// The inputs and outputs maps can also be accessed via *this.inputs and\n\t// *this.outputs.\n\trequest:function(inputs,request) {\n\t},\n\t\n\t// Add custom code to convert the response content to outputs\n\t//\n\t//*response.status    The status code of the response\n\t//*response.content   The content of the response as a javascript\n\t//                    object.\n\t//*response.request   The request object that resulted in the response.\n\t//\n\t// The inputs and outputs maps can also be accessed via *this.inputs and\n\t// *this.outputs.\n\tresponse:function(outputs,response) {\n\t    outputs.temp = (response.content.main.temp - 273.15).toFixed(0);\n\t    outputs.hum = response.content.main.humidity.toFixed(0);\n\t    outputs.image = response.content.weather[0].icon + \".png\"; \n\t    outputs.desc = response.content.weather[0].description;\n\t    console.log(response.content);\n\t}\n})\n",
+                            "resource": "https://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp&APPID=",
+                            "backendEndpoint": "",
+                            "backendType": "external"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "temp",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 13
+                            },
+                            {
+                                "name": "hum",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 14
+                            },
+                            {
+                                "name": "id",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 15
+                            },
+                            {
+                                "name": "desc",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 16
+                            },
+                            {
+                                "name": "image",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 17
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "9e2b407a-41f2-f15a-ac58-74a061e301ec",
+                        "type": "Timer",
+                        "x": 4.689455907657248,
+                        "y": 471.3531834811997,
+                        "parameters": {
+                            "duration": 1000
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "436f81f6-184d-bb3f-ea7e-e74d25e48096",
+                        "type": "Timer",
+                        "x": 8.689455907657248,
+                        "y": 324.35318348119966,
+                        "parameters": {
+                            "duration": 1000
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/データ表示",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "87c61e9d-1dfa-8fc0-e3f0-bee726cef4d8",
+                        "fromProperty": "名前",
+                        "toId": "7b08aea6-eecd-00db-921d-de981e9c1133",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "87c61e9d-1dfa-8fc0-e3f0-bee726cef4d8",
+                        "fromProperty": "値",
+                        "toId": "3b13d881-920f-2d31-628e-8a45f4e8738e",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "87c61e9d-1dfa-8fc0-e3f0-bee726cef4d8",
+                        "fromProperty": "単位",
+                        "toId": "2e662fd5-5cfa-a6a7-5883-837f22175e20",
+                        "toProperty": "text"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "2fff7c18-a215-f7e2-37bd-27c5b6268237",
+                        "type": "Group",
+                        "version": 2,
+                        "x": 356,
+                        "y": 124,
+                        "parameters": {
+                            "sizeMode": "childSize",
+                            "width": {
+                                "value": 50,
+                                "unit": "%"
+                            },
+                            "height": {
+                                "value": 100,
+                                "unit": "%"
+                            },
+                            "padding": 0,
+                            "alignX": "center",
+                            "alignY": "center"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "bb003b40-5135-7ded-ac7d-b1e5146b9764",
+                                "type": "Rectangle",
+                                "x": 20,
+                                "y": 46,
+                                "parameters": {
+                                    "width": {
+                                        "value": 240,
+                                        "unit": "px"
+                                    },
+                                    "height": {
+                                        "value": 80,
+                                        "unit": "px"
+                                    },
+                                    "cornerRadius": 20,
+                                    "color": "#85FFF1",
+                                    "opacity": 1,
+                                    "blur": 4
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "8090efa7-85da-56f3-984e-2beef60c81cc",
+                                "type": "Stack Layout",
+                                "x": 20,
+                                "y": 92,
+                                "parameters": {
+                                    "orientation": "horizontal",
+                                    "itemSpacing": 10,
+                                    "padding": 10
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "7b08aea6-eecd-00db-921d-de981e9c1133",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 46,
+                                        "parameters": {
+                                            "color": "#000000",
+                                            "text": "Text",
+                                            "alignX": "left",
+                                            "alignY": "top",
+                                            "fontSize": 50
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "3b13d881-920f-2d31-628e-8a45f4e8738e",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 128,
+                                        "parameters": {
+                                            "alignY": "top",
+                                            "alignX": "left",
+                                            "color": "#000000",
+                                            "text": "Text",
+                                            "fontSize": 50
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "2e662fd5-5cfa-a6a7-5883-837f22175e20",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 210,
+                                        "parameters": {
+                                            "alignX": "left",
+                                            "alignY": "center",
+                                            "color": "#000000",
+                                            "text": "Text",
+                                            "fontSize": 50
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "87c61e9d-1dfa-8fc0-e3f0-bee726cef4d8",
+                        "type": "Component Inputs",
+                        "x": 129,
+                        "y": 318.5,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "名前",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            },
+                            {
+                                "name": "値",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            },
+                            {
+                                "name": "単位",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 3
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "devices": "Default Device",
+        "Default Device.fillMode": "aspectFit",
+        "Default Device.canvasWidth": 800,
+        "Default Device.canvasHeight": 480,
+        "Default Device.transparent": false,
+        "Default Device.rootComponent": "/Main"
+    },
+    "rootNodeId": "2d3ccd33-f1ef-2dc5-3e1a-ca9d61cd222b",
+    "version": "1"
+}
